@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="style.css
+    "
+    />
+    <title></title>
+  </head>
+  <body>
+    <p>Hvad er længden af din flyrejse ?</p>
+    <input type="text" id="flyrejse" />
+    <button>
+      Submit for at se hvor meget co2 du udleder med rejsen, se i console
+    </button>
+    <script>
+      const Co2 = 109;
+      const btn = document.querySelector("button");
+      const flyrejse = document.querySelector("#flyrejse").value;
+
+      let timer = 8;
+      let co2UdledtIKgVedFlyrejse = timer * Co2;
+      let resultat;
+
+      btn.addEventListener("click", clickSubmit);
+
+      function clickSubmit() {
+        if (isNaN(flyrejse)) {
+          resultat = "Its not a number, try again";
+          console.log(resultat);
+        }
+        else {
+          timer = flyrejse;
+          console.log(timer)
+          resultat = `Du udleder ${co2UdledtIKgVedFlyrejse} kg Co2 på denne flyrejse.`
+          console.log(resultat);
+        }
+      }
+    </script>
+  </body>
+</html>
