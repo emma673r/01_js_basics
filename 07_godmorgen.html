@@ -12,32 +12,18 @@
     <title></title>
   </head>
   <body>
-    <input type="text" id="name" />
-    <button>Click og se i console</button>
     <script>
-      let længde = 10;
-      let bredde = 15;
-      let areal = længde * bredde;
+      const hour = new Date().getHours();
 
-      const btn = document.querySelector("button");
-      const name = document.querySelector("#name");
-
-      btn.addEventListener("click", clickSubmit);
-
-      function clickSubmit() {
-        let brugerNavn = name.value;
-        console.log(`Tillykke dit navn er ${brugerNavn}. Goddag med dig.`);
-      }
-
-      if (areal < 100) {
-        resultat = "Arealet er for lille";
-      } else if (areal < 200) {
-        resultat = "Arealet er ok";
+      if (hour > 5 && hour < 10) {
+        console.log("Godmorgen");
+      } else if (hour > 18 && hour < 0) {
+        console.log("Godaften");
+      } else if (hour > 0 && hour < 5) {
+        console.log("Godnat");
       } else {
-        resultat = "Arealet er for stort";
+        console.log("Goddag");
       }
-
-      console.log(resultat);
     </script>
   </body>
 </html>
