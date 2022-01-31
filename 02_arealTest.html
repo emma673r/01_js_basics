@@ -13,17 +13,18 @@
   </head>
   <body>
     <script>
-      let længde = 8;
-      let bredde = 12;
+      let længde = 10;
+      let bredde = 15;
       let areal = længde * bredde;
-      // let resultat =
-      //   "Længden er " +
-      //   længde +
-      //   " meter og bredden er " +
-      //   bredde +
-      //   " meter. Arealet er " +
-      //   længde * bredde + "meter.";
-      let resultat = `Længden er ${længde} meter og bredden er ${bredde} meter. Arealet er ${areal} meter.`;
+
+      if (areal < 100) {
+        resultat = "Arealet er for lille";
+      } else if (areal < 200) {
+        resultat = "Arealet er ok";
+      } else {
+        resultat = "Arealet er for stort";
+      }
+
       console.log(resultat);
     </script>
   </body>
